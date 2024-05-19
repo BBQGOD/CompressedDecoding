@@ -1,10 +1,12 @@
-# CompressedDecoding
+# Compressed Decoding
 
 **Compressed Decoding**: decoding multiple tokens from an LLM for multiple samples at the same time
 
 ![Compressed Decoding](./figs/pre_method.png)
 
 ## Installation
+
+Python 3.10 is recommended. You can install the required packages by running the following command:
 
 ```bash
 pip install -r requirements.txt
