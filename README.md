@@ -32,3 +32,7 @@ It is worth noting that our experiment is performed on a single NVIDIA A100-PCIE
 ![Preliminary Results](./figs/pre_results.png)
 
 Try it out with different hyper-parameters (e.g., batch size, etc.) and let us know your thoughts!
+
+## Prospects
+
+The method is orthogonal to [**lookahead decoding**](https://github.com/hao-ai-lab/LookaheadDecoding?tab=readme-ov-file) and could be used together with **batched decoding**, which is a promising direction for future work.
