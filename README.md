@@ -25,6 +25,25 @@ To use it with your own dataset, please modify the `data_path` and `data_filenam
 - `instruction`: `str`
 - `input`: `str`
 
+## Why it works? Core Observation
+
+![observation](./figs/observation.png)
+
+### Left Side: Independent Decoding
+
+- Each LLM generates a list of top-K tokens independently.
+- These tokens are ordered by their respective probabilities for each model.
+
+### Right Side: Compressed Decoding
+
+- The input embeddings from each model are combined.
+
+### Order Preservation
+
+- **Primary Order Retention**: Tokens that appear at the top of decoded token lists (left) are likely to remain at the top (right), maintaining their relative importance.
+
+- **Minor Reordering**: Some reordering might still occur due to the need to resolve conflicts between tokens from different models. We introduce some strategies to identify specific features and resolve these conflicts.
+
 ## Preliminary Results
 
 The following table shows the preliminary results of the time used in decoding 30 samples from the alpaca-gpt4 dataset with the batch size of `3` on Gemma-7B. The decoding time is measured in seconds. Through human evaluation, we found that the decoding results are similar to Gemma-7B's greedy decoding results.
