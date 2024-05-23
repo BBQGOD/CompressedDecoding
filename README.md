@@ -46,7 +46,7 @@ To use it with your own dataset, please modify the `data_path` and `data_filenam
 
 ## Preliminary Results
 
-The following table shows the preliminary results of the time used in decoding 30 samples from the alpaca-gpt4 dataset with the batch size of `3` on Gemma-7B. The decoding time is measured in seconds. Through human evaluation, we found that the decoding results are similar to Gemma-7B's greedy decoding results.
+The following table shows the preliminary results of the time used in decoding 60 samples from the alpaca-gpt4 dataset with the batch size of `3` on Gemma-7B. The decoding time is measured in seconds. Through human evaluation, we found that the decoding results are similar to Gemma-7B's greedy decoding results.
 
 It is worth noting that our experiment is performed on a single NVIDIA A100-PCIE-40GB GPU, on which Batched Decoding on 7B LLMs is not possible due to the memory limitation.
 
